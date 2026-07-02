@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Toaster } from "@/components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -77,21 +78,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "TrafficBoost AI — Get More Traffic, Leads & Sales with AI" },
+      {
+        name: "description",
+        content:
+          "The AI-powered marketing platform that helps entrepreneurs, creators, and small business owners create high-converting content, attract more visitors, and grow their business in minutes.",
+      },
+      { name: "author", content: "TrafficBoost AI" },
+      { property: "og:title", content: "TrafficBoost AI — Get More Traffic, Leads & Sales with AI" },
+      {
+        property: "og:description",
+        content:
+          "AI-powered marketing tools to generate content, capture leads, and grow your business — starting today.",
+      },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "TrafficBoost AI" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "TrafficBoost AI — Get More Traffic, Leads & Sales with AI" },
+      {
+        name: "twitter:description",
+        content:
+          "AI-powered marketing tools to generate content, capture leads, and grow your business.",
+      },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
   shellComponent: RootShell,
@@ -121,6 +139,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <Toaster theme="dark" position="top-center" richColors />
     </QueryClientProvider>
   );
 }
