@@ -100,6 +100,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "AI-powered marketing tools to generate content, capture leads, and grow your business.",
       },
+      { name: "description", content: "AI Growth Hub builds high-converting capture pages to maximize email signups and business growth." },
+      { property: "og:description", content: "AI Growth Hub builds high-converting capture pages to maximize email signups and business growth." },
+      { name: "twitter:description", content: "AI Growth Hub builds high-converting capture pages to maximize email signups and business growth." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6cf3aec3-dbdb-43ca-ab80-ffb7055e96b2/id-preview-6c228db7--b4964bfb-edf8-43b2-a9cc-82568d8479c3.lovable.app-1782994716564.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6cf3aec3-dbdb-43ca-ab80-ffb7055e96b2/id-preview-6c228db7--b4964bfb-edf8-43b2-a9cc-82568d8479c3.lovable.app-1782994716564.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
