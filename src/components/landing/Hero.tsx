@@ -1,5 +1,7 @@
 import { VideoPlayer } from "./VideoPlayer";
 import { LeadForm } from "./LeadForm";
+import promoClip from "@/assets/promo-clip.mp4.asset.json";
+
 
 export function Hero() {
   return (
@@ -23,7 +25,7 @@ export function Hero() {
             high-converting content, attract more visitors, and grow their business
             in minutes.
           </p>
-          <VideoPlayer />
+          <VideoPlayer src={promoClip.url} label="Watch the AI in action" duration="0:06" />
         </div>
 
         <div className="lg:col-span-5">
